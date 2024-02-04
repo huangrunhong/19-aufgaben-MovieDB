@@ -1,0 +1,33 @@
+.header {
+  padding: 60px 11rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--background-darkGreen);
+  h3 {
+    color: var(--green);
+  }
+  .searchBar {
+    display: flex;
+    gap: 0.5rem;
+    input {
+      width: 20rem;
+      padding: 0.5rem 1rem;
+      border-radius: 2rem;
+      border: 2px solid var(--green);
+      background-color: rgba(var(--green), 0.5);
+    }
+    input:focus {
+      outline: none;
+    }
+  }
+  .favorite {
+    cursor: pointer;
+    svg {
+      fill: yellowgreen;
+    }
+  }
+  .favorite:active {
+    transform: scale(0.95);
+  }
+}

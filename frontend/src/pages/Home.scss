@@ -1,0 +1,44 @@
+.homePage {
+  background-color: var(--background-darkGreen);
+  .banner {
+    padding: 5rem 15rem;
+    height: 70vh;
+    background-image: url("../images/movie.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--darkRed);
+    span {
+      -webkit-text-fill-color: var(--background-darkGreen);
+      -webkit-text-stroke-color: var(--darkRed);
+      -webkit-text-stroke-width: 2px;
+    }
+  }
+  .allMovies {
+    padding: 4rem 11rem;
+    h1 {
+      color: var(--green);
+      margin: 2rem 0;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 6rem;
+      div {
+        img {
+          width: 100%;
+        }
+        h5 {
+          &:nth-of-type(1) {
+            color: var(--white);
+            font-weight: 500;
+          }
+          &:nth-of-type(2) {
+            color: var(--green);
+            font-weight: 300;
+          }
+        }
+      }
+    }
+  }
+}

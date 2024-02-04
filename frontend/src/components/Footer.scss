@@ -1,0 +1,20 @@
+.footer {
+  display: flex;
+  align-items: center;
+  padding: 3rem 11rem;
+  justify-content: space-between;
+  color: var(--background-darkGreen);
+  background-color: var(--green);
+  p {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  div {
+    display: flex;
+    gap: 2rem;
+    img {
+      height: 2.5rem;
+    }
+  }
+}

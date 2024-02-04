@@ -1,0 +1,18 @@
+.addMovie {
+  background-color: var(--background-darkGreen);
+  .banner {
+    padding: 5rem 15rem;
+    height: 70vh;
+    background-image: url("../images/movie.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--darkRed);
+    text-align: center;
+    span {
+      -webkit-text-fill-color: var(--background-darkGreen);
+      -webkit-text-stroke-color: var(--darkRed);
+      -webkit-text-stroke-width: 2px;
+    }
+  }
+}

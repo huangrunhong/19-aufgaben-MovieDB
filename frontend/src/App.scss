@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  font-family: "Poppins";
+}
+
+h1 {
+  font-size: 65px;
+  font-weight: 800;
+}
+h2 {
+  font-size: 60px;
+  font-weight: 700;
+}
+h3 {
+  font-size: 50px;
+  font-weight: 700;
+}
+h4 {
+  font-size: 30px;
+  font-weight: 500;
+}
+h5 {
+  font-size: 20px;
+  // font-weight: 500;
+}
+p {
+  font-size: 25px;
+}
+
+a {
+  text-decoration: none;
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;800&display=swap");
+
+:root {
+  --background-darkGreen: #264653;
+  --green: rgba(42, 157, 143, 1);
+  --white: #ffffff;
+  --darkRed: #a16171;
+  --heart-red: #d50303;
+}
