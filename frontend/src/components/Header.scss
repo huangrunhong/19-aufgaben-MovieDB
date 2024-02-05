@@ -20,6 +20,9 @@
     input:focus {
       outline: none;
     }
+    input::placeholder {
+      color: rgba(42, 157, 143, 0.4);
+    }
   }
   .favorite {
     cursor: pointer;
@@ -27,7 +30,14 @@
       fill: yellowgreen;
     }
   }
-  .favorite:active {
+  .notFavorite {
+    cursor: pointer;
+    svg {
+      fill: var(--green);
+    }
+  }
+  .favorite:active,
+  .notFavorite:active {
     transform: scale(0.95);
   }
 }

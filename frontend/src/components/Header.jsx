@@ -1,18 +1,45 @@
-import Button from "./Button";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+
 import "./Header.scss";
-const Header = () => {
+
+const Header = ({ searchMovies, fetchLikedMovies }) => {
+  const [search, setSearch] = useState("");
+  const [liked, setLiked] = useState(false);
+
+  const getSearchParams = () => {
+    const params = new URLSearchParams();
+
+    search && params.append("search", search);
+    liked && params.append("liked", liked);
+
+    return "?" + params.toString();
+  };
+
   return (
     <div className="header">
       <Link to="/">
         <h3>MMDb</h3>
       </Link>
       <div className="searchBar">
-        <input type="text" placeholder=" e.g. The Godfather" />
-        <Button name="Search" />
+        <input
+          type="text"
+          placeholder=" e.g. The Godfather"
+          value={search}
+          onChange={(event) => setSearch(event.target.value)}
+        />
+        <button onClick={() => searchMovies(search)}>Search</button>
       </div>
-      <Link to="/favorite-movies">
-        <div className="favorite">
+
+      <Link
+        to={{ pathname: "/", search: getSearchParams() }}
+        onClick={() => {
+          const next = !liked;
+          setLiked(next);
+          fetchLikedMovies(next);
+        }}
+      >
+        <div className={liked ? "favorite" : "notFavorite"}>
           <svg
             width="40"
             height="36"
@@ -28,7 +55,7 @@ const Header = () => {
         </div>
       </Link>
       <Link to="/add-movie">
-        <Button name="+" />
+        <button>+</button>
       </Link>
     </div>
   );
