@@ -4,6 +4,7 @@ import { editMovieByIdCtrl } from "./editMovieByIdCtrl.js";
 import { getAllMoviesCtrl } from "./getAllMoviesCtrl.js";
 import { getMovieByIdCtrl } from "./getMovieByIdCtrl.js";
 import { postNewMovieCtrl } from "./postNewMovieCtrl.js";
+import { registerAccountCtrl } from "./registerAccountCtrl.js";
 
 export const movieController = {
   getAllMoviesCtrl,
@@ -12,4 +13,8 @@ export const movieController = {
   deleteMovieByIdCtrl,
   editMovieByIdCtrl,
   addNewFavoriteMovieCtrl,
+};
+
+export const userController = {
+  registerAccountCtrl,
 };

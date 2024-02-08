@@ -4,7 +4,7 @@ export async function editMovieByIdCtrl(req, res) {
   try {
     const movieId = req.params.movieId;
     const editedMovie = req.body;
-    console.log(editedMovie);
+
     const result = await MovieService.editMovie(movieId, editedMovie);
     res.json({ success: true, result: result });
   } catch (error) {

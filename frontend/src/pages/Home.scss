@@ -20,6 +20,7 @@
       color: var(--green);
       margin: 2rem 0;
     }
+
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));

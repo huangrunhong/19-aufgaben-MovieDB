@@ -11,7 +11,7 @@ export async function editMovie(movieId, editedMovie) {
   movie.plot = editedMovie.plot ?? movie.plot;
   movie.tomato = editedMovie.tomato ?? movie.tomato;
   movie.liked = editedMovie.liked ?? movie.liked;
-  // console.log(editedMovie);
+
   return movie.save();
 }
 

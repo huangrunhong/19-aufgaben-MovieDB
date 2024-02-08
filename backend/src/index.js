@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import moviesRouter from "./routes/moviesRouter.js";
 import mongoose from "mongoose";
 import morgan from "morgan";
+import usersRouter from "./routes/usersRouter.js";
 
 dotenv.config();
 const app = express();
@@ -14,7 +15,9 @@ app.use(cors());
 app.use(morgan("dev"));
 app.use(express.json());
 app.use("/api/movies", moviesRouter);
+app.use("/users", usersRouter);
 app.use(express.static("uploads"));
+app.use(express.static("userPhotos"));
 
 const serverListenToPort = () =>
   app.listen(PORT, () => console.log("server at port: ", PORT));

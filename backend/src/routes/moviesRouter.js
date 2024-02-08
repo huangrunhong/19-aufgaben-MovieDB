@@ -32,8 +32,6 @@ moviesRouter.post(
   movieController.editMovieByIdCtrl
 );
 
-//moviesRouter.get("/favorites", movieController.getAllFavoriteMoviesCtrl);
-
 moviesRouter.post(
   "/favorites/:movieId",
   movieController.addNewFavoriteMovieCtrl

@@ -5,10 +5,9 @@ export async function postNewMovieCtrl(req, res) {
     const newMovie = req.body;
 
     newMovie.tomato = { rating: Number(newMovie.rating) };
-    newMovie.genres = newMovie.genres.split(",");
+    // newMovie.genres = newMovie.genres.split(",");
     newMovie.poster = `http://localhost:9999/${req.files[0].originalname}`;
-    console.log(newMovie.poster);
-
+    console.log(newMovie);
     const result = await MovieService.addMovie(newMovie);
     res.json({ success: true, result });
   } catch (error) {
