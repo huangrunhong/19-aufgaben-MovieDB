@@ -1,5 +1,5 @@
 .detailsPage {
-  padding: 10rem 15rem;
+  padding: 4rem 15rem;
   background-color: var(--background-darkGreen);
 
   .part1 {
@@ -48,14 +48,18 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
-    img {
-      width: 100%;
+    .detailsPoster {
+      img {
+        width: 80%;
+      }
     }
     .text {
       display: flex;
       flex-direction: column;
       gap: 2rem;
       .genres {
+        display: flex;
+        gap: 0.75rem;
         h5 {
           display: inline-block;
           padding: 2% 5%;

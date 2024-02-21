@@ -6,6 +6,15 @@
 body {
   min-height: 100vh;
   font-family: "Poppins";
+  & > div {
+    min-height: 100vh;
+    section {
+      &:nth-of-type(2) {
+        margin-top: 8rem;
+        min-height: 70vh;
+      }
+    }
+  }
 }
 
 h1 {
@@ -29,16 +38,21 @@ h5 {
   // font-weight: 500;
 }
 p {
-  font-size: 25px;
+  font-size: 1rem;
 }
 
 a {
   text-decoration: none;
 }
+i {
+  font-size: 3rem;
+  color: var(--green);
+  cursor: pointer;
+}
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;800&display=swap");
 
 :root {
-  --background-darkGreen: #264653;
+  --background-darkGreen: rgba(38, 70, 83, 1);
   --green: rgba(42, 157, 143, 1);
   --white: #ffffff;
   --darkRed: #a16171;
@@ -57,4 +71,22 @@ button {
 button:active {
   box-shadow: 0 0px 4px black;
   transform: scale(0.95);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--green);
+    border-radius: 0.5rem;
+    background-color: #ffffff7c;
+  }
+  input:focus {
+    outline: none;
+    border: 3px solid var(--green);
+  }
 }

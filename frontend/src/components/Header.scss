@@ -1,43 +1,63 @@
 .header {
-  padding: 60px 11rem;
+  padding: 2rem 11rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: var(--background-darkGreen);
+  position: fixed;
+  top: 0;
+  width: 100%;
+
   h3 {
     color: var(--green);
   }
-  .searchBar {
+  .navBarRight {
     display: flex;
-    gap: 0.5rem;
-    input {
-      width: 20rem;
-      padding: 0.5rem 1rem;
-      border-radius: 2rem;
-      border: 2px solid var(--green);
-      background-color: rgba(var(--green), 0.5);
+    gap: 10%;
+    align-items: center;
+    .searchBar {
+      display: flex;
+      gap: 0.5rem;
+      input {
+        width: 30vw;
+        padding: 0.5rem 1rem;
+        border-radius: 2rem;
+        border: 2px solid var(--green);
+        background-color: rgba(var(--green), 0.5);
+        color: var(--green);
+        font-size: 1rem;
+      }
+      input:focus {
+        outline: none;
+        border: 3px solid var(--green);
+      }
+      input::placeholder {
+        color: rgba(42, 157, 143, 0.4);
+      }
     }
-    input:focus {
-      outline: none;
+    .personalPermissions {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      .favorite {
+        cursor: pointer;
+        svg {
+          fill: yellowgreen;
+        }
+      }
+      .notFavorite {
+        cursor: pointer;
+        svg {
+          fill: var(--green);
+        }
+      }
+      .favorite:active,
+      .notFavorite:active {
+        transform: scale(0.95);
+      }
+      .log {
+        background-color: var(--background-darkGreen);
+      }
     }
-    input::placeholder {
-      color: rgba(42, 157, 143, 0.4);
-    }
-  }
-  .favorite {
-    cursor: pointer;
-    svg {
-      fill: yellowgreen;
-    }
-  }
-  .notFavorite {
-    cursor: pointer;
-    svg {
-      fill: var(--green);
-    }
-  }
-  .favorite:active,
-  .notFavorite:active {
-    transform: scale(0.95);
   }
 }

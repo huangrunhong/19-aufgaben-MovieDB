@@ -1,0 +1,51 @@
+.loginPage {
+  padding: 5rem 15rem;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  gap: 1rem;
+  align-items: center;
+
+  .welcome {
+    height: 100%;
+    padding: 15rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-top-left-radius: 3rem;
+    border-bottom-left-radius: 3rem;
+    background: linear-gradient(
+      315deg,
+      rgba(245, 243, 178, 1) 0%,
+      rgba(206, 238, 236, 1) 100%
+    );
+    p {
+      color: var(--green);
+    }
+    h1 {
+      -webkit-text-fill-color: var(--green);
+      -webkit-text-stroke-color: var(--background-darkGreen);
+      -webkit-text-stroke-width: 2px;
+    }
+  }
+  .formPart {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 3rem 6rem;
+    background: linear-gradient(
+      135deg,
+      rgba(245, 243, 178, 1) 0%,
+      rgba(206, 238, 236, 1) 100%
+    );
+    background-color: rgb(194, 247, 247);
+    border-top-right-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+  }
+  .buttonPart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
